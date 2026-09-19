@@ -8,6 +8,26 @@
 
 > v0.1.1 是开发预览：可运行的浏览器适配器与测试，不是完整桌面应用。
 
+## 安装后的使用实测与截图
+
+从 GitHub 安装的 **v0.1.1** 已完成真实 Jev + Chrome／Chromium 多步测试：
+打开 Reports → 切换 Daily report → 勾选异常筛选。两个浏览器均通过标题、行数、筛选状态、
+选中标签四项独立检查；安装后 CLI 的预览和实际执行也通过。
+这是小规模合成场景测试，不能解读为全部网站和功能都已验证。完整范围见 [测试矩阵](docs/TESTING.md)。
+
+下面是**真实浏览器对纯合成测试页的截图**，不是助手产品界面；没有真实账户、客户数据、密钥或本机路径。
+测试页面源码和截图脚本一并提供，结果可核查。
+
+**执行前**
+
+![真实浏览器测试前：纯合成页面，尚未打开报表](docs/screenshots/browser-before.png)
+
+**执行后：日报已选中、异常筛选已勾选、显示两条合成异常记录**
+
+![真实 Jev 浏览器测试后：完成日报筛选](docs/screenshots/browser-after.png)
+
+[安装后测试记录](docs/usage-verification-2026-09-19.json) · [测试页面](examples/evidence-fixture.html) · [截图复现脚本](scripts/capture-evidence.mjs)
+
 ```mermaid
 flowchart LR
     Task[任务与边界] --> Observe[读取页面控件]

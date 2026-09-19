@@ -1,0 +1,175 @@
+{
+  "kind": "installed-skill-live-usage-and-screenshots",
+  "observedAt": "2026-09-19T13:50:06.069Z",
+  "distribution": "GitHub release v0.1.1",
+  "installedViaSkillsCli": true,
+  "syntheticDataOnly": true,
+  "browserRuns": [
+    {
+      "browser": "chromium",
+      "browserVersion": "153.0.8010.12",
+      "skillVersion": "0.1.1",
+      "status": "needs_verification",
+      "verified": true,
+      "checks": [
+        {
+          "name": "Daily exceptions heading",
+          "pass": true
+        },
+        {
+          "name": "Exactly two visible records",
+          "pass": true
+        },
+        {
+          "name": "Exception filter checked",
+          "pass": true
+        },
+        {
+          "name": "Daily tab selected",
+          "pass": true
+        }
+      ],
+      "actual": {
+        "title": "Daily report · Exceptions",
+        "rows": 2,
+        "filter": true,
+        "dailySelected": "true"
+      },
+      "elapsedMs": 2081,
+      "decisionTrace": [
+        {
+          "choice": "a0",
+          "confidence": 1,
+          "executed": true,
+          "action": "Click Reports",
+          "model": "jev-1.13.0",
+          "apiMs": 844
+        },
+        {
+          "choice": "a1",
+          "confidence": 0.99,
+          "executed": true,
+          "action": "Click Daily report",
+          "model": "jev-1.13.0",
+          "apiMs": 381
+        },
+        {
+          "choice": "a2",
+          "confidence": 0.99,
+          "executed": true,
+          "action": "Click Show exceptions only",
+          "model": "jev-1.13.0",
+          "apiMs": 356
+        },
+        {
+          "choice": "DONE",
+          "confidence": 0.73,
+          "executed": false,
+          "action": "DONE",
+          "model": "jev-1.13.0",
+          "apiMs": 346
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "browserVersion": "153.0.8010.48",
+      "skillVersion": "0.1.1",
+      "status": "needs_verification",
+      "verified": true,
+      "checks": [
+        {
+          "name": "Daily exceptions heading",
+          "pass": true
+        },
+        {
+          "name": "Exactly two visible records",
+          "pass": true
+        },
+        {
+          "name": "Exception filter checked",
+          "pass": true
+        },
+        {
+          "name": "Daily tab selected",
+          "pass": true
+        }
+      ],
+      "actual": {
+        "title": "Daily report · Exceptions",
+        "rows": 2,
+        "filter": true,
+        "dailySelected": "true"
+      },
+      "elapsedMs": 3422,
+      "decisionTrace": [
+        {
+          "choice": "a0",
+          "confidence": 0.99,
+          "executed": true,
+          "action": "Click Reports",
+          "model": "jev-1.13.0",
+          "apiMs": 768
+        },
+        {
+          "choice": "a1",
+          "confidence": 0.99,
+          "executed": true,
+          "action": "Click Daily report",
+          "model": "jev-1.13.0",
+          "apiMs": 275
+        },
+        {
+          "choice": "a2",
+          "confidence": 0.99,
+          "executed": true,
+          "action": "Click Show exceptions only",
+          "model": "jev-1.13.0",
+          "apiMs": 380
+        },
+        {
+          "choice": "DONE",
+          "confidence": 0.72,
+          "executed": false,
+          "action": "DONE",
+          "model": "jev-1.13.0",
+          "apiMs": 307
+        }
+      ]
+    }
+  ],
+  "installedCli": {
+    "previewPassed": true,
+    "live": {
+      "status": "verified",
+      "verified": true,
+      "assertions": [
+        {
+          "type": "text-present",
+          "value": "Daily report · Exceptions",
+          "status": "pass"
+        },
+        {
+          "type": "text-present",
+          "value": "2 rows",
+          "status": "pass"
+        }
+      ],
+      "decisions": 4,
+      "executedActions": 3,
+      "elapsedMs": 2148
+    }
+  },
+  "screenshots": [
+    "screenshots/browser-before.png",
+    "screenshots/browser-after.png"
+  ],
+  "limitations": [
+    "Two local synthetic browser runs and one CLI run, not a website compatibility benchmark.",
+    "No native Codex browser connection, authenticated sites, desktop apps or speech tested."
+  ],
+  "screenshotSha256": {
+    "screenshots/browser-before.png": "2de1b32b2a612a49084ec112273f7e1ac39e1112b55d7e0571917b23bd3c68da",
+    "screenshots/browser-after.png": "a45cf21929674479b1675abd93a8c366063c02f7d07d037ba17cd59073ae8475"
+  }
+}
