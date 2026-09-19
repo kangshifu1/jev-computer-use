@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/wy-coliney/jev-browser-use",
+  "revision": "f14b60e0ae1ee90cd73eb6650e30a666a84c021a",
+  "license": "MIT",
+  "importedFiles": {
+    "skills/jev-computer-use/vendor/jev-browser-use/bridge.mjs": "8148ec29edf5989d0707eabc6a858f11570d296c3c4e166ba69a7421e939d9c8",
+    "skills/jev-computer-use/vendor/jev-browser-use/LICENSE": "a3c2a19d721942806b173c15dabcfb63be41891858fc8999e0fd4fe0b36c7aa1",
+    "skills/jev-computer-use/references/upstream-skill.md": "76b02b63cd0cbe722cb80bf006abbcb4a5ba178c8dde1caea9b8a90b9f4bfce2",
+    "skills/jev-computer-use/references/provider-configuration.md": "9cf19178b748fce36e143c0527fdb7d9ca4b2dc5ac6b17ef240e74d69012c034"
+  }
+}

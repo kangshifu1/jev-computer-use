@@ -1,0 +1,5 @@
+{
+  "provider": "typesafe",
+  "model": "jev-latest",
+  "envFile": "/absolute/path/to/credentials.env"
+}

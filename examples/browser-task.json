@@ -1,0 +1,8 @@
+{
+  "goal": "Open Reports and verify the daily report appears",
+  "startUrl": "http://127.0.0.1:8769/",
+  "allowedOrigins": ["http://127.0.0.1:8769"],
+  "controls": [{"op":"click","name":"Reports"}],
+  "assertions": [{"type":"text-present","value":"Daily report ready"}],
+  "maxSteps": 6
+}

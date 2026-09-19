@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jev Computer Use"
+  short_description: "Operate Chrome and Chromium with bounded Jev actions."
+  default_prompt: "Use $jev-computer-use to help with my task."
