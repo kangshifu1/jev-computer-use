@@ -20,7 +20,8 @@
       "Codex wall time includes model reasoning, tool transport, scheduling and any gaps between calls; provider-only timing is unavailable.",
       "Both controllers know the same repeated synthetic task; the current Codex conversation already contains its prior demo.",
       "Three trials per controller are descriptive observations, not a general product speed or quality benchmark."
-    ]
+    ],
+    "totalTiming": "totalMs = setupMs + loopAndVerificationMs per trial; summary medianTotalMs is the median of these paired totals. Excludes harness setup, browser close and report serialization."
   },
   "summary": {
     "jev": {
@@ -28,14 +29,20 @@
       "verified": 3,
       "medianLoopAndVerificationMs": 2211.99,
       "minLoopAndVerificationMs": 2125.41,
-      "maxLoopAndVerificationMs": 3067.89
+      "maxLoopAndVerificationMs": 3067.89,
+      "medianTotalMs": 4409.23,
+      "minTotalMs": 3232.88,
+      "maxTotalMs": 5116.92
     },
     "codex-session": {
       "attempts": 3,
       "verified": 3,
       "medianLoopAndVerificationMs": 25823.21,
       "minLoopAndVerificationMs": 23504.57,
-      "maxLoopAndVerificationMs": 28367.74
+      "maxLoopAndVerificationMs": 28367.74,
+      "medianTotalMs": 27058.74,
+      "minTotalMs": 24823.29,
+      "maxTotalMs": 30067.09
     }
   },
   "samples": [
@@ -125,7 +132,8 @@
           "executed": false,
           "apiMs": 320
         }
-      ]
+      ],
+      "totalMs": 5116.92
     },
     {
       "controller": "codex-session",
@@ -181,7 +189,8 @@
       "verified": true,
       "model": "current Codex session; exact model variant not exposed",
       "providerMs": null,
-      "completed": true
+      "completed": true,
+      "totalMs": 27058.74
     },
     {
       "controller": "jev",
@@ -269,7 +278,8 @@
           "executed": false,
           "apiMs": 298
         }
-      ]
+      ],
+      "totalMs": 3232.88
     },
     {
       "controller": "codex-session",
@@ -325,7 +335,8 @@
       "verified": true,
       "model": "current Codex session; exact model variant not exposed",
       "providerMs": null,
-      "completed": true
+      "completed": true,
+      "totalMs": 24823.29
     },
     {
       "controller": "jev",
@@ -413,7 +424,8 @@
           "executed": false,
           "apiMs": 354
         }
-      ]
+      ],
+      "totalMs": 4409.23
     },
     {
       "controller": "codex-session",
@@ -469,7 +481,8 @@
       "verified": true,
       "model": "current Codex session; exact model variant not exposed",
       "providerMs": null,
-      "completed": true
+      "completed": true,
+      "totalMs": 30067.09
     }
   ]
 }

@@ -16,6 +16,16 @@ Browser / Computer Use Skill 的成绩。原生 Skill 在当前任务中未启�
 “每轮含启动的总时间”先逐轮相加再取中位数，不是将两列中位数相加。
 原始记录：[controller-benchmark-2026-09-19.json](controller-benchmark-2026-09-19.json)。
 
+逐轮总时间如下，直接根据已有启动与执行计时相加，未重跑或修改原始计时：
+
+| 控制方式 | 第 1 轮总时间 | 第 2 轮总时间 | 第 3 轮总时间 |
+| --- | ---: | ---: | ---: |
+| Jev | 5.12 s | 3.23 s | 4.41 s |
+| 当前 Codex 会话 + 共享适配器 | 27.06 s | 24.82 s | 30.07 s |
+
+JSON 每轮新增 `totalMs = setupMs + loopAndVerificationMs`，汇总新增
+`medianTotalMs`、`minTotalMs`、`maxTotalMs`。总时间不含测试工具准备、浏览器关闭和写报告。
+
 ## 计时口径
 
 - 浏览器启动、创建隔离环境和页面加载单列为 `setupMs`。
