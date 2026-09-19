@@ -1,6 +1,8 @@
 node_modules/
 .env
 .env.*
+jev-config.yml
+jev-config.yaml
 !.env.example
 runs/
 .local/

@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.1 — 2026-09-19 — live smoke verification
+
+- Add an opt-in live TypeSafe smoke script using an isolated local Chromium fixture.
+- Real `jev-1.13.0` selected one Reports click and then DONE; two independent assertions passed.
+- Observed loop time: 1,452 ms for this single run, including two model decisions. No speed comparison is implied.
+- Publish sanitized evidence, exclude local YAML credential filenames, and keep API tests outside default CI.
+- This does not establish general task accuracy or live Codex runtime compatibility.
+
 ## v0.1.0 — 2026-09-19 — developer preview
 
 - Independent repository and installable `jev-computer-use` skill; no market dependency.

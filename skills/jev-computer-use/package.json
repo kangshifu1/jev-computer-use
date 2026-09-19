@@ -1,8 +1,12 @@
 {
   "name": "jev-computer-use-skill",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
-  "engines": { "node": ">=22" },
-  "dependencies": { "playwright": "1.63.0" }
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
 }

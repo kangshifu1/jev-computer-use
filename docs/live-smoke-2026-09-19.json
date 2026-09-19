@@ -1,0 +1,39 @@
+{
+  "kind": "live-typesafe-and-real-chromium",
+  "observedAt": "2026-09-19T13:39:44.043Z",
+  "status": "verified",
+  "verified": true,
+  "assertions": [
+    {
+      "type": "text-present",
+      "value": "Daily report ready",
+      "status": "pass"
+    },
+    {
+      "type": "text-absent",
+      "value": "No report loaded",
+      "status": "pass"
+    }
+  ],
+  "decisions": 2,
+  "executedActions": 1,
+  "elapsedMs": 1452,
+  "models": [
+    "jev-1.13.0"
+  ],
+  "limitations": "One synthetic task. Does not establish general model accuracy, visual coverage, Codex runtime compatibility or production reliability.",
+  "decisionTrace": [
+    {
+      "choice": "a0",
+      "confidence": 0.99,
+      "executed": true,
+      "apiMs": 937
+    },
+    {
+      "choice": "DONE",
+      "confidence": 0.8,
+      "executed": false,
+      "apiMs": 397
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 扩展。既可以接入 Codex 已有的 Computer Use 接口，也可以独立驱动 Chrome／Chromium。
 无需安装 Jev Skills Market。社区项目，与 TypeSafe、OpenAI 无隶属关系。
 
-> v0.1.0 是开发预览：可运行的浏览器适配器与测试，不是完整桌面应用。
+> v0.1.1 是开发预览：可运行的浏览器适配器与测试，不是完整桌面应用。
 
 ```mermaid
 flowchart LR
@@ -20,7 +20,7 @@ flowchart LR
 ## 安装 Skill
 
 ```sh
-npx skills add https://github.com/kangshifu1/jev-computer-use/tree/v0.1.0 --skill jev-computer-use -g -a codex
+npx skills add https://github.com/kangshifu1/jev-computer-use/tree/v0.1.1 --skill jev-computer-use -g -a codex
 ```
 
 安装仅提供 Skill 文件。Codex 模式仍需实际可用的浏览器工具；独立模式需要下面的驱动依赖。
@@ -31,7 +31,7 @@ npx skills add https://github.com/kangshifu1/jev-computer-use/tree/v0.1.0 --skil
 ```sh
 git clone https://github.com/kangshifu1/jev-computer-use.git
 cd jev-computer-use
-git checkout v0.1.0
+git checkout v0.1.1
 npm ci
 npx playwright install chromium
 
@@ -65,7 +65,7 @@ API 密钥放在本地后端，不放在网页、Git 或聊天消息里。页面
 | Codex 已有浏览器 tab | 保留原接口；本版本未实测 Codex 工具连接 |
 | 自由输入、图片理解 | 交给宿主模型或上层应用 |
 | 原生桌面、iframe、canvas、上传、拖拽 | 尚未实现 |
-| 实时 Jev 成功率／性能 | 需要配置凭据后对真实任务评估；没有沿用上游的速度宣传数字 |
+| 真实 Jev 调用 | jev-1.13.0 完成本地合成任务，2 次决策、1 次点击、2 项断言通过；不代表通用成功率 |
 
 浏览器默认是新建隔离会话，不是你的个人 Chrome 标签页。来源白名单限制导航，不是完整网络隔离。
 `needs_verification` 不表示通过；CLI 的 `verified` 仅说明任务中列出的确定性断言已通过。
@@ -87,7 +87,8 @@ JEV_TEST_BROWSER=chrome npm run test:browser
 ```
 
 浏览器测试启动本地合成页面并操作真实浏览器，模型响应在测试进程中模拟，不消耗 Jev API。
-它验证执行链路与断言，不能验证模型理解质量。发布记录见 [CHANGELOG.md](CHANGELOG.md)。
+另有使用真实 Jev 的小规模测试，见 [脱敏记录](docs/live-smoke-2026-09-19.json)。本地环境配置 `TYPESAFE_API_KEY` 后可运行 `npm run test:live` 重现；会产生 API 调用。
+发布记录见 [CHANGELOG.md](CHANGELOG.md)。
 
 ## 来源和贡献
 
