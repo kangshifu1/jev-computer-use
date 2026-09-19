@@ -28,6 +28,19 @@
 
 [安装后测试记录](docs/usage-verification-2026-09-19.json) · [测试页面](examples/evidence-fixture.html) · [截图复现脚本](scripts/capture-evidence.mjs)
 
+## 与当前 Codex 会话的耗时比较
+
+同一个合成三步任务、同一 Chrome 适配器，各三轮、无演示停顿：
+
+| 控制方式 | 执行与核验中位数 | 核验 |
+| --- | ---: | --- |
+| Jev 决策循环 | 2.21 秒 | 3/3 通过 |
+| 当前 Codex 会话逐步调用相同适配器 | 25.82 秒 | 3/3 通过 |
+| Codex 原生 Browser Skill | **未测** | 未测 |
+
+Codex 的时间包含思考、工具往返和调度，且具体模型变体未单独取得；这不是原生 Skill
+或模型纯推理速度的排名。浏览器启动时间另计，详见 [测量条件、分轮数据与复现](docs/BENCHMARK.md)。
+
 ```mermaid
 flowchart LR
     Task[任务与边界] --> Observe[读取页面控件]

@@ -1,0 +1,475 @@
+{
+  "kind": "same-adapter-controller-comparison",
+  "observedAt": "2026-09-19T14:42:50.309Z",
+  "goal": "Open Reports, select the Daily report tab, and turn on Show exceptions only. Stop when Daily report · Exceptions is visible, the filter is checked, and exactly 2 rows are displayed.",
+  "protocol": {
+    "browser": "Isolated headless Chrome",
+    "viewport": {
+      "width": 1440,
+      "height": 940
+    },
+    "syntheticDataOnly": true,
+    "artificialDelays": false,
+    "ordering": "Alternating Jev and Codex",
+    "codexActionPolicy": "One observed click then a fresh snapshot per model/tool round trip",
+    "timing": "Start before initial observation; stop after four independent DOM checks. Browser launch/navigation reported separately; browser close and report serialization excluded.",
+    "nativeCodexBrowserSkillTested": false,
+    "codexModelOnlyLatencyAvailable": false,
+    "limitations": [
+      "This measures the current interactive Codex session plus the shared Playwright adapter, not the native Codex Browser Skill.",
+      "Codex wall time includes model reasoning, tool transport, scheduling and any gaps between calls; provider-only timing is unavailable.",
+      "Both controllers know the same repeated synthetic task; the current Codex conversation already contains its prior demo.",
+      "Three trials per controller are descriptive observations, not a general product speed or quality benchmark."
+    ]
+  },
+  "summary": {
+    "jev": {
+      "attempts": 3,
+      "verified": 3,
+      "medianLoopAndVerificationMs": 2211.99,
+      "minLoopAndVerificationMs": 2125.41,
+      "maxLoopAndVerificationMs": 3067.89
+    },
+    "codex-session": {
+      "attempts": 3,
+      "verified": 3,
+      "medianLoopAndVerificationMs": 25823.21,
+      "minLoopAndVerificationMs": 23504.57,
+      "maxLoopAndVerificationMs": 28367.74
+    }
+  },
+  "samples": [
+    {
+      "controller": "jev",
+      "trial": 1,
+      "observedAt": "2026-09-19T14:40:58.716Z",
+      "browserVersion": "153.0.8010.48",
+      "setupMs": 2904.93,
+      "loopAndVerificationMs": 2211.99,
+      "browserToolMs": 335,
+      "hostRoundTripAndReasoningMs": null,
+      "actions": [
+        {
+          "op": "click",
+          "index": 2,
+          "elapsedMs": 80.77
+        },
+        {
+          "op": "click",
+          "index": 4,
+          "elapsedMs": 17.62
+        },
+        {
+          "op": "click",
+          "index": 5,
+          "elapsedMs": 38.76
+        }
+      ],
+      "observations": 8,
+      "actual": {
+        "title": "Daily report · Exceptions",
+        "rows": 2,
+        "filter": true,
+        "dailySelected": "true"
+      },
+      "checks": [
+        {
+          "name": "Daily exceptions heading",
+          "pass": true
+        },
+        {
+          "name": "Two visible records",
+          "pass": true
+        },
+        {
+          "name": "Exception filter checked",
+          "pass": true
+        },
+        {
+          "name": "Daily tab selected",
+          "pass": true
+        }
+      ],
+      "verified": true,
+      "model": "jev-1.13.0",
+      "providerMs": 1871,
+      "decisions": 4,
+      "engineStatus": "needs_verification",
+      "completed": true,
+      "decisionTrace": [
+        {
+          "choice": "a0",
+          "confidence": 1,
+          "action": "Click Reports",
+          "executed": true,
+          "apiMs": 886
+        },
+        {
+          "choice": "a1",
+          "confidence": 0.99,
+          "action": "Click Daily report",
+          "executed": true,
+          "apiMs": 325
+        },
+        {
+          "choice": "a2",
+          "confidence": 0.99,
+          "action": "Click Show exceptions only",
+          "executed": true,
+          "apiMs": 340
+        },
+        {
+          "choice": "DONE",
+          "confidence": 0.74,
+          "action": "DONE",
+          "executed": false,
+          "apiMs": 320
+        }
+      ]
+    },
+    {
+      "controller": "codex-session",
+      "trial": 1,
+      "observedAt": "2026-09-19T14:41:02.535Z",
+      "browserVersion": "153.0.8010.48",
+      "setupMs": 1235.53,
+      "loopAndVerificationMs": 25823.21,
+      "browserToolMs": 247.3,
+      "hostRoundTripAndReasoningMs": 25575.91,
+      "actions": [
+        {
+          "op": "click",
+          "index": 2,
+          "elapsedMs": 31.03
+        },
+        {
+          "op": "click",
+          "index": 4,
+          "elapsedMs": 16.16
+        },
+        {
+          "op": "click",
+          "index": 5,
+          "elapsedMs": 31.77
+        }
+      ],
+      "observations": 4,
+      "actual": {
+        "title": "Daily report · Exceptions",
+        "rows": 2,
+        "filter": true,
+        "dailySelected": "true"
+      },
+      "checks": [
+        {
+          "name": "Daily exceptions heading",
+          "pass": true
+        },
+        {
+          "name": "Two visible records",
+          "pass": true
+        },
+        {
+          "name": "Exception filter checked",
+          "pass": true
+        },
+        {
+          "name": "Daily tab selected",
+          "pass": true
+        }
+      ],
+      "verified": true,
+      "model": "current Codex session; exact model variant not exposed",
+      "providerMs": null,
+      "completed": true
+    },
+    {
+      "controller": "jev",
+      "trial": 2,
+      "observedAt": "2026-09-19T14:41:29.766Z",
+      "browserVersion": "153.0.8010.48",
+      "setupMs": 1107.47,
+      "loopAndVerificationMs": 2125.41,
+      "browserToolMs": 218.59,
+      "hostRoundTripAndReasoningMs": null,
+      "actions": [
+        {
+          "op": "click",
+          "index": 2,
+          "elapsedMs": 69.27
+        },
+        {
+          "op": "click",
+          "index": 4,
+          "elapsedMs": 18.18
+        },
+        {
+          "op": "click",
+          "index": 5,
+          "elapsedMs": 48.66
+        }
+      ],
+      "observations": 8,
+      "actual": {
+        "title": "Daily report · Exceptions",
+        "rows": 2,
+        "filter": true,
+        "dailySelected": "true"
+      },
+      "checks": [
+        {
+          "name": "Daily exceptions heading",
+          "pass": true
+        },
+        {
+          "name": "Two visible records",
+          "pass": true
+        },
+        {
+          "name": "Exception filter checked",
+          "pass": true
+        },
+        {
+          "name": "Daily tab selected",
+          "pass": true
+        }
+      ],
+      "verified": true,
+      "model": "jev-1.13.0",
+      "providerMs": 1905,
+      "decisions": 4,
+      "engineStatus": "needs_verification",
+      "completed": true,
+      "decisionTrace": [
+        {
+          "choice": "a0",
+          "confidence": 1,
+          "action": "Click Reports",
+          "executed": true,
+          "apiMs": 964
+        },
+        {
+          "choice": "a1",
+          "confidence": 0.99,
+          "action": "Click Daily report",
+          "executed": true,
+          "apiMs": 329
+        },
+        {
+          "choice": "a2",
+          "confidence": 0.99,
+          "action": "Click Show exceptions only",
+          "executed": true,
+          "apiMs": 314
+        },
+        {
+          "choice": "DONE",
+          "confidence": 0.73,
+          "action": "DONE",
+          "executed": false,
+          "apiMs": 298
+        }
+      ]
+    },
+    {
+      "controller": "codex-session",
+      "trial": 2,
+      "observedAt": "2026-09-19T14:41:33.515Z",
+      "browserVersion": "153.0.8010.48",
+      "setupMs": 1318.72,
+      "loopAndVerificationMs": 23504.57,
+      "browserToolMs": 222.26,
+      "hostRoundTripAndReasoningMs": 23282.31,
+      "actions": [
+        {
+          "op": "click",
+          "index": 2,
+          "elapsedMs": 67.08
+        },
+        {
+          "op": "click",
+          "index": 4,
+          "elapsedMs": 25.77
+        },
+        {
+          "op": "click",
+          "index": 5,
+          "elapsedMs": 31.09
+        }
+      ],
+      "observations": 4,
+      "actual": {
+        "title": "Daily report · Exceptions",
+        "rows": 2,
+        "filter": true,
+        "dailySelected": "true"
+      },
+      "checks": [
+        {
+          "name": "Daily exceptions heading",
+          "pass": true
+        },
+        {
+          "name": "Two visible records",
+          "pass": true
+        },
+        {
+          "name": "Exception filter checked",
+          "pass": true
+        },
+        {
+          "name": "Daily tab selected",
+          "pass": true
+        }
+      ],
+      "verified": true,
+      "model": "current Codex session; exact model variant not exposed",
+      "providerMs": null,
+      "completed": true
+    },
+    {
+      "controller": "jev",
+      "trial": 3,
+      "observedAt": "2026-09-19T14:41:58.719Z",
+      "browserVersion": "153.0.8010.48",
+      "setupMs": 1341.34,
+      "loopAndVerificationMs": 3067.89,
+      "browserToolMs": 210.4,
+      "hostRoundTripAndReasoningMs": null,
+      "actions": [
+        {
+          "op": "click",
+          "index": 2,
+          "elapsedMs": 66.68
+        },
+        {
+          "op": "click",
+          "index": 4,
+          "elapsedMs": 28.88
+        },
+        {
+          "op": "click",
+          "index": 5,
+          "elapsedMs": 18.37
+        }
+      ],
+      "observations": 8,
+      "actual": {
+        "title": "Daily report · Exceptions",
+        "rows": 2,
+        "filter": true,
+        "dailySelected": "true"
+      },
+      "checks": [
+        {
+          "name": "Daily exceptions heading",
+          "pass": true
+        },
+        {
+          "name": "Two visible records",
+          "pass": true
+        },
+        {
+          "name": "Exception filter checked",
+          "pass": true
+        },
+        {
+          "name": "Daily tab selected",
+          "pass": true
+        }
+      ],
+      "verified": true,
+      "model": "jev-1.13.0",
+      "providerMs": 2854,
+      "decisions": 4,
+      "engineStatus": "needs_verification",
+      "completed": true,
+      "decisionTrace": [
+        {
+          "choice": "a0",
+          "confidence": 1,
+          "action": "Click Reports",
+          "executed": true,
+          "apiMs": 1520
+        },
+        {
+          "choice": "a1",
+          "confidence": 0.99,
+          "action": "Click Daily report",
+          "executed": true,
+          "apiMs": 425
+        },
+        {
+          "choice": "a2",
+          "confidence": 0.99,
+          "action": "Click Show exceptions only",
+          "executed": true,
+          "apiMs": 555
+        },
+        {
+          "choice": "DONE",
+          "confidence": 0.79,
+          "action": "DONE",
+          "executed": false,
+          "apiMs": 354
+        }
+      ]
+    },
+    {
+      "controller": "codex-session",
+      "trial": 3,
+      "observedAt": "2026-09-19T14:42:21.679Z",
+      "browserVersion": "153.0.8010.48",
+      "setupMs": 1699.35,
+      "loopAndVerificationMs": 28367.74,
+      "browserToolMs": 227.06,
+      "hostRoundTripAndReasoningMs": 28140.69,
+      "actions": [
+        {
+          "op": "click",
+          "index": 2,
+          "elapsedMs": 65.41
+        },
+        {
+          "op": "click",
+          "index": 4,
+          "elapsedMs": 30
+        },
+        {
+          "op": "click",
+          "index": 5,
+          "elapsedMs": 46.49
+        }
+      ],
+      "observations": 4,
+      "actual": {
+        "title": "Daily report · Exceptions",
+        "rows": 2,
+        "filter": true,
+        "dailySelected": "true"
+      },
+      "checks": [
+        {
+          "name": "Daily exceptions heading",
+          "pass": true
+        },
+        {
+          "name": "Two visible records",
+          "pass": true
+        },
+        {
+          "name": "Exception filter checked",
+          "pass": true
+        },
+        {
+          "name": "Daily tab selected",
+          "pass": true
+        }
+      ],
+      "verified": true,
+      "model": "current Codex session; exact model variant not exposed",
+      "providerMs": null,
+      "completed": true
+    }
+  ]
+}
